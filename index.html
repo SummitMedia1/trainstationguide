@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/stylesheets/railguide.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	<div class="row" style="margin-left: 0; margin-right: 0">
+		<div class="jumbotron" style="border-radius: 200px">
+			<img src="./assets/images/rail-systemAsset-1.png" id="trainIllus">
+		</div>
+		<div class="col-sm-12 form-group" style="background-color: rgb(66, 66, 66); padding: 30px; margin-bottom: 0; border-top-left-radius: 20px; border-top-right-radius: 20px">
+			<div class="col-sm-6">
+				  <label for="startStationLabel" style="color: #BFF268">Select Starting Station: (S to N)</label>
+				  <select class="form-control" id="endingStation">
+					<option id="0">Littleton-Mineral</option>
+					<option id="1">Littleton-Downtown</option>
+					<option id="2">Oxford-City of Sheridan</option>	    
+					<option id="3">Englewood</option>
+					<option id="4">Evans</option>
+					<option id="5">I-25 & Broadway</option>
+					<option id="6">Alameda</option>
+					<option id="7">10th & Osage</option>
+					<option id="8">Auraria West</option>
+					<option id="9">Sports Authority Stadium</option>
+					<option id="10">Elitch/Pepsi Ctr.</option>
+					<option id="11">Union Station</option>
+					<option id="12">Colfax/Auraria</option>
+					<option id="13">Convention Center</option>
+					<option id="14">16th & California</option>
+					<option id="15">18th & California</option>
+					<option id="16">20th & Welton</option>
+					<option id="17">25th & Welton</option>
+					<option id="18">27th & Welton</option>
+					<option id="19">30th & Downing</option>
+				  </select>
+			</div>
+			<div class="col-sm-6">
+				<label for="endStationLabel" style="color:#FF4444">Select Destination Station: (N to S)</label>
+				  <select class="form-control" id="startingStation">
+				    <option id="19">30th & Downing</option>
+				    <option id="18">27th & Welton</option>				    
+				    <option id="17">25th & Welton</option>
+				    <option id="16">20th & Welton</option>
+				    <option id="15">18th & California</option>
+				    <option id="14">16th & California</option>
+				    <option id="13">Convention Center</option>
+				    <option id="12">Colfax/Auraria</option>				    
+				    <option id="11">Union Station</option>
+				    <option id="10">Elitch/Pepsi Ctr.</option>
+				    <option id="9">Sports Authority Stadium</option>
+				    <option id="8">Auraria West</option>
+				    <option id="7">10th & Osage</option>
+				    <option id="6">Alameda</option>
+				    <option id="5">I-25 & Broadway</option>
+				    <option id="4">Evans</option>
+				    <option id="3">Englewood</option>
+				    <option id="2">Oxford-City of Sheridan</option>
+				    <option id="1">Littleton-Downtown</option>
+				    <option id="0">Littleton-Mineral</option>
+				  </select>
+			</div>
+	</div>
+</div>			
+<div class="container" id="map" align="center" style="">
+<img src="./assets/images/Map-Illustrator-C_D.png" id="imgMap"></div>
+</div>
+
+<div class="container" id="widgets" style="margin-left: auto; margin-right: auto">
+	<div class="col-sm-2 widgets" id="Where Am I? widgets">Where Am I?</div>
+	<div class="col-sm-2 widgets" id="Station Alarm widgets">Station Alarm</div>
+	<div class="col-sm-2 widgets" id="htmlClock widgets">Clock / Weather</div>
+	<div class="col-sm-2 widgets" id="News Feed widgets">News Feed</div>
+	<div class="col-sm-2 widgets" id="Contact widgets">Contact RTD</div>
+	
+<!-- 	<div class="col-sm-2 widgets" id="htmlClock widgets">Clock</div> -->
+</div>
+</div>
+</div> <!-- Main Container Close -->
+</body>
+</html>
