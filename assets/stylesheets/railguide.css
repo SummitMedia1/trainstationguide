@@ -22,6 +22,11 @@ padding: 0;
 
 }
 
+label {
+	font-size: 12px;
+	font-weight: 400;
+}
+
 #widgets {
 	display: flex;
 	position: relative;
@@ -55,7 +60,7 @@ padding: 0;
 #imgMap {
 	margin-top: 50px;
 	height: auto;
-	width: 50%;
+	width: 60%;
 	padding-bottom: 30px;
 
 }
