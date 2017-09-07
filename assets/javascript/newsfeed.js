@@ -6,20 +6,17 @@ $('#Reddit').on('click', function(){
 				.done(function(response){
 					for (var i = 0; i<response.articles.length;i++) {
 						var newsDiv = $('<div>');
-						var p = $('<p>').text('Title: '+response.articles[i].title);
-						var link = $('<a>').attr('src',+response.articles[i].url);
+						var p = $('<p>').text(response.articles[i].title);
+						var link = $('<a>').attr('src', +response.articles[i].url);
 						var articleImage = $('<img>');
 						articleImage.attr('src',response.articles[i].urlToImage);
-
 						newsDiv.append(p);
 						newsDiv.append(link);
 						newsDiv.append(articleImage);
-						$('#newsGoesHere').append(newsDiv);
-						
+						$('#newsGoesHere').append(newsDiv);		
 					}
 				});
 		});
-
 
 			$('#ESPN').on('click', function(){
 			var x = $(this).data('news');
@@ -29,17 +26,14 @@ $('#Reddit').on('click', function(){
 				.done(function(response){
 					for (var i = 0; i<response.articles.length;i++) {
 						var newsDiv = $('<div>');
-						var articleLink = $('<div>');
-						articleLink.attr('href',response.articles[i].url);
-						var p = $('<p>').text('Title: '+response.articles[i].title);
+						var p = $('<p>').text(response.articles[i].title);
+						var link = $('<a>').attr('src', +response.articles[i].url);
 						var articleImage = $('<img>');
 						articleImage.attr('src',response.articles[i].urlToImage);
 						newsDiv.append(p);
-						newsDiv.append(articleLink);
+						newsDiv.append(link);
 						newsDiv.append(articleImage);
-						$('#newsGoesHere').append(newsDiv);
-
-						
+						$('#newsGoesHere').append(newsDiv);						
 					}
 				});
-		});
+		});		

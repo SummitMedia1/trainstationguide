@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Khand:700|Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Khand:700|Comfortaa|Alfa+Slab+One');
 
 * {
 	box-sizing: border-box;
@@ -11,15 +11,27 @@ body {
 }
 
 .jumbotron {
-border-left: 6px solid rgb(66,66,66);
-border-right: 6px solid rgb(66,66,66);
-border-bottom: 6px solid rgb(66,66,66);
+border-left: 6px solid rgb(150,150,150);
+border-right: 6px solid rgb(150,150,150);
+border-bottom: 6px solid rgb(150,150,150);
 text-align: center;
-font-family: Khand;
-color: #fff;
-background-color: #ffe149;
-padding: 0;
+background-color: rgb(67,67,67);
+padding: 40px;
+margin-bottom: 30px;
 
+}
+
+#currentTime {
+	font-family: HelveticaNeue-UltraLight;
+	font-size: 26px;
+	text-align: center;
+	background-color: #ffffff;
+	color: rgb(67,67,67);
+	border-radius: 50px;
+	width: 40%;
+	margin-top: 7%;
+	margin-bottom: 7%;
+	padding: 24px;
 }
 
 label {
@@ -34,20 +46,80 @@ label {
 #widgets {
 	display: flex;
 	position: relative;
-	margin-top: 30px;
-	color: white;
+	margin-top: 40px;
 	text-align: center;
-	font-size: 16px;
 	flex-wrap: wrap;
 	justify-content: center;
-	}
+	}	
 
-.widgets {
-	background-color: rgb(66, 66, 66);
-	border-radius: 20px;
-	padding: 60px;
-	border: 6px solid #ffffff;
-	margin: 1%;
+.widget1 img{
+width: 100%;
+background-color: rgb(66,66,66);
+border-radius: 25px;
+padding: 10px;
+border: 2px solid #fff;
+}
+
+.widget1:hover img{
+background-color: green;
+border-radius: 25px;
+padding: 20px;
+}
+
+.widget2 img{
+width: 100%;
+background-color: rgb(66,66,66);
+border-radius: 25px;
+padding: 10px;
+border: 2px solid #fff;
+}
+
+.widget2:hover img{
+background-color: green;
+border-radius: 25px;
+padding: 20px;
+}
+
+.widget3 img{
+width: 100%;
+background-color: rgb(66,66,66);
+border-radius: 25px;
+padding: 10px;
+border: 2px solid #fff;
+}
+
+.widget3:hover img{
+background-color: green;
+border-radius: 25px;
+padding: 20px;
+}
+
+.widget4 img{
+width: 100%;
+background-color: rgb(66,66,66);
+border-radius: 25px;
+padding: 10px;
+border: 2px solid #fff;
+}
+
+.widget4:hover img{
+background-color: green;
+border-radius: 25px;
+padding: 20px;
+}
+
+.widget5 img{
+width: 100%;
+background-color: rgb(66,66,66);
+border-radius: 25px;
+padding: 10px;
+border: 2px solid #fff;
+}
+
+.widget5:hover img{
+background-color: green;
+border-radius: 25px;
+padding: 20px;
 }
 
 #map {
@@ -70,12 +142,85 @@ label {
 }
 
 #trainIllus {
-	width: 40%;
+	width: 65%;
 	margin-top: 20px;
 	padding-bottom: 10px;
+	position: relative;
+}
+
+#trainIllus2 {
+	width: 90%;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+#newsFeedID {
+	width: 60%;
+}
+
+#Reddit {
+	background-image: url('../images/Reddit-PNG-File.png');
+	width: 40%;
+	padding: 60px;
+  	border: 0;
+  	background-size: 70%; /* To fill the dimensions of container (button), or */
+  	background-repeat: no-repeat;
+  	background-position: center;
+  	border-radius: 40px;
+  	border: 5px solid #fff;
+}
+
+#ESPN {
+	background-image: url(../images/espn.png);
+	width: 40%;
+	padding: 60px;
+  	border: 0;
+  	background-size: 70%; /* To fill the dimensions of container (button), or */
+  	background-repeat: no-repeat;
+  	background-position: center;
+  	border-radius: 40px;
+  	border: 5px solid #fff;
+}
+
+#ESPN:hover, #Reddit:hover{
+	width: 55%; 
+
+}
+
+#newsGoesHere div {
+	margin-top: 50px;
+	padding: 30px;
+	display: inline-block;
+	background-color: rgb(66,66,66);
+	border-radius: 30px;
+	width: 70%;
+	border: 2px solid #fff;
+	font-size: 22px;
+	font-family: Alfa Slab One;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#newsGoesHere img {
+	max-width: 48%;
+	border-radius: 30px;
+	border: 6px solid #fff;
+}
+
+a {
+	width: 100px;
+	height: 100px;
 }
 
 @media only screen and (max-width: 720px) {
+
+#currentTime {
+	font-size: 16px;
+	padding: 30px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
 
 #map {
 	position: relative;
@@ -93,18 +238,35 @@ label {
 	
 }
 
-.widgets {
-width: 50%;
-height: auto;
-border: 4px solid;
-}	
+.widget1 img,
+.widget2 img,
+.widget3 img,
+.widget4 img,
+.widget5 img {
 
-#trainIllus {
-	position: relative;
-	top: 10px;
+	margin-top: 30px;
+	width: 40%;
+}
+
+#trainIllus2 {
 	width: 100%;
-	height: 100%;
-	padding: 40px;
+}
+
+#newsGoesHere {
+	font-size: 16px;
+	font-family: Alfa Slab One;
+	text-transform: uppercase;
+	color: #000;
+}
+
+#newsGoesHere img {
+	max-width: 100%;
+	border-radius: 20px;
+	border: 4px solid #fff;
+}
+
+#newsFeedID {
+	width: 90%;
 }
 
 }
