@@ -33,7 +33,7 @@ $('#Reddit').on('click', function(){
 						newsDiv.append(p);
 						newsDiv.append(link);
 						newsDiv.append(articleImage);
-						$('#newsGoesHere').append(newsDiv);						
+						$('#newsGoesHere').append(newsDiv);					
 					}
 				});
 		});		
