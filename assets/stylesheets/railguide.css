@@ -230,10 +230,11 @@ margin-right: auto;
 @media only screen and (max-width: 720px) {
 
 #currentTime {
-	font-size: 16px;
-	padding: 30px;
+	font-size: 15px !important;
 	margin-bottom: 20px;
-	border-radius: 20px;
+	width: 100% !important;
+	clear: left !important;
+	padding: 10px;
 }
 
 #map {
