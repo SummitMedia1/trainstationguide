@@ -29,7 +29,7 @@ margin-bottom: 30px;
 	text-align: center;
 	background-color: #ffffff;
 	color: rgb(67,67,67);
-	border-radius: 50px;
+	border-radius: 100px;
 	width: 40%;
 	margin-top: 7%;
 	margin-bottom: 7%;
@@ -233,8 +233,9 @@ margin-right: auto;
 	font-size: 15px !important;
 	margin-bottom: 20px;
 	width: 100% !important;
+	float: none !important;
 	clear: left !important;
-	padding: 10px;
+	padding: 10px !important;
 }
 
 #map {
