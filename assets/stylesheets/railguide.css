@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: #CF0E0E;
+	background-color: #FF8000;
 	padding: 0;
 	margin:0;
 }
@@ -217,7 +217,7 @@ a {
 }
 
 #newsFeedButtonContainer {
-border: 6px solid rgb(150,150,150);
+border: 6px solid #fff;
 border-radius: 35px;
 text-align: center;
 padding-bottom: 60px;
