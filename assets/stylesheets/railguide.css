@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Unna:700|Comfortaa|Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Unna:700|Comfortaa|Alfa+Slab+One|PT+Sans+Narrow:700');
 
 * {
 	box-sizing: border-box;
@@ -121,18 +121,18 @@ padding: 20px;
 }
 
 #newsGoesHere div {
-	margin-top: 50px;
+	margin-top: 40px;
 	padding: 30px;
 	display: inline-block;
 	background-color: rgb(66,66,66);
 	border-radius: 30px;
 	width: 70%;
 /*	border: 2px solid #fff;*/
-	font-size: 38px;
+	font-size: 42px;
 	text-align: center;
 	line-height: 1.2em;
-	font-family: Unna;
-	text-transform: uppercase;
+	font-family: PT Sans Narrow;
+/*	text-transform: uppercase;*/
 	color: #fff;
 }
 
@@ -144,10 +144,10 @@ padding: 20px;
 	margin-right: auto;
 }
 
-a {
+/*a {
 	width: 100px;
 	height: 100px;
-}
+}*/
 
 #newsFeedButtonContainer {
 border: 6px solid #fff;
