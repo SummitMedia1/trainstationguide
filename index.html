@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<!--     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> -->
 
     <!-- brendan's links -->
     <link rel="stylesheet" href="./assets/stylesheets/clock.css">
@@ -34,15 +34,15 @@
 					<div id="clock-date">
 					</div>
 					<!-- lower half -->
-					<div id="clock-lower">
+					<div class="row" id="clock-lower">
 						<!-- weather container -->
-						<div id="weatherBox">
+						<div class="col-sm-8" id="weatherBox" style="margin-top: 14px">
 							<h4 id="weather-holder">Sunny - 70°</h4>
 							<p id="weather-recommended">It's nice out!</p>
 							<p id="weather-weekday"></p>
 						</div>
 						<!-- side icons -->
-						<div id="weather-icons">
+						<div class="col-sm-4" id="weather-icons" style="margin-top: 7px">
 							<img id="weather-icon" src="http://icons.wxug.com/i/c/k/partlycloudy.gif">
 						</div>
 						<div id="weather-float-clear">
@@ -196,13 +196,12 @@
 </div>
 
 <div class="row" style="margin-top: 50px" align="center">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-2 widget1" id="Where Am I? widgets"><a href="gps.html" target="_blank"><img src="./assets/images/whereAm-widget.png" id="widget1"></a></div>
-	<div class="col-sm-2 widget2" id="Station Alarm widgets"><img src="./assets/images/alarm-widget.png" id="widget2"></div>
-	<div class="col-sm-2 widget3" id="htmlClock widgets">Clock / Weather</div>
-	<div class="col-sm-2 widget3" id="News Feed widgets"><a href="newsfeed.html" target="_blank"><img src="./assets/images/newsfeed-widget.png" id="widget4"></a></div>
-	<div class="col-sm-2 widget5" id="Contact widgets"><img src="./assets/images/phone2-widget.png" id="widget5"></div>
-	<div class="col-sm-1"></div>
+<!-- 	<div class="col-sm-2"></div> -->
+	<div class="col-sm-3 widget1" id="Where Am I? widgets"><a href="gps.html" target="_blank"><img src="./assets/images/whereAm-widget.png" id="widget1"></a></div>
+	<div class="col-sm-3 widget2" id="Station Alarm widgets"><img src="./assets/images/alarm-widget.png" id="widget2"></div>
+	<div class="col-sm-3 widget3" id="News Feed widgets"><a href="newsfeed.html" target="_blank"><img src="./assets/images/newsfeed-widget.png" id="widget4"></a></div>
+	<div class="col-sm-3 widget5" id="Contact widgets"><img src="./assets/images/phone2-widget.png" id="widget5"></div>
+<!-- 	<div class="col-sm-2"></div> -->
 </div>
 
 <div class="row" style="height: 50px; background-color: transparent"></div>

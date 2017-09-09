@@ -2,6 +2,7 @@
 var clockTime = null;
 var clockDate = moment().format("MMM Do, YYYY");
 var hour;
+var weatherDayNight;
 
 function clockWidgetStart() {
 	clockSet();
