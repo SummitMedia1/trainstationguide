@@ -1,0 +1,189 @@
+.clock-widget {
+	background: url(http://i0.wp.com/blog.wallsrepublic.com/wp-content/uploads/2014/06/white_wallpaper.jpg?resize=594%2C594) repeat center;
+}
+
+#clock {
+	width: 95%;
+	height: 95%;
+}
+
+#clock-time {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30pt;
+	margin: 5pt 10pt 0pt 10pt;
+
+	border: 2pt solid #000000;
+	border-radius: 50pt;
+
+	color: white;
+	background: #00ff00 url("https://i.pinimg.com/originals/c7/2e/1b/c72e1b56a5a4887d604ad691a9a2507f.jpg") no-repeat fixed center; 
+
+	font-size: 20pt;
+	font-family: 'Zilla Slab', serif;
+	font-weight: bolder;
+}
+
+#clock-date {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 15pt;
+	border-bottom: 4pt double black;
+	margin-top: 5pt;
+
+	color: black;
+
+	font-size: 18pt;
+	font-family: 'Zilla Slab', serif;
+}
+
+#clock-lower {
+	width: 95%;
+	height: 45%;
+	position: relative;
+	top: 0pt;
+	left: 5pt;
+
+	color: black;
+}
+
+#weatherBox {
+	float: left;
+	width: 65%;
+	height: 85%;
+	margin: 2.5%;
+	text-align: center;
+}
+
+#weather-icons {
+	float: left;
+	width: 25%;
+	height: 85%;
+	margin-left: 1%;
+	margin-right: 4%;
+}
+
+#weather-holder {
+	font-weight: bolder;
+	font-size: 12pt;
+	font-family: 'Zilla Slab', serif;
+	line-height: 5pt;
+}
+
+#weather-recommended {
+	font-size: 10pt;
+	font-family: 'Zilla Slab', serif;
+}
+
+#weather-float-clear {
+	clear: left;
+}
+
+@media only screen and (max-width: 990px) {
+
+    #clock-time { 
+    	font-size: 12pt;
+    }
+
+    #weather-holder {
+		font-size: 8pt;
+		margin-left: -25pt;
+	}
+	
+	#weather-recommended {
+		font-size: 8pt;
+		margin-left: -25pt;
+	}
+
+	#weather-icons {
+		float: left;
+		margin-left: -15pt;
+
+	}
+}
+
+@media only screen and (max-width: 776px) {
+
+	#clock-time {
+		font-size: 18pt;
+	}
+
+}
+
+@media only screen and (max-width: 720px) {
+	#clock-time { 
+    	font-size: 18pt;
+    }
+
+    #weather-holder {
+		font-size: 16pt;
+		margin-left: -5%;
+	}
+	
+	#weather-recommended {
+		font-size: 14pt;
+		margin-left: -5%;
+	}
+
+	#weather-icons {
+		margin-left: 0pt;
+
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	#clock-time { 
+    	font-size: 18pt;
+    }
+
+    #weather-holder {
+		font-size: 12pt;
+	}
+	
+	#weather-recommended {
+		font-size: 10pt;
+	}
+		#weather-icons {
+		margin-left: -7pt;
+
+	}
+}
+
+@media only screen and (max-width: 384px) {
+	#clock-date { 
+    	font-size: 14pt;
+    }
+
+    #weather-holder {
+		font-size: 10pt;
+	}
+	
+	#weather-recommended {
+		font-size: 8pt;
+	}
+		#weather-icons {
+		margin-left: -10pt;
+
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	#clock-date { 
+    	font-size: 10pt;
+    }
+    #weatherBox {
+    	width: 100%;
+    }
+
+    #weather-holder {
+		font-size: 10pt;
+	}
+	
+	#weather-recommended {
+		display: none;
+	}
+		#weather-icons {
+		margin-left: -10pt;
+		display: none;
+	}
+}
