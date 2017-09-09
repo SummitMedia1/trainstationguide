@@ -10,6 +10,13 @@
     <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- brendan's links -->
+    <link rel="stylesheet" href="./assets/stylesheets/clock.css">
+    <script src="./assets/javascript/moment.js"></script>
+	<script src="./assets/javascript/clock.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+
 </head>
 <body>
 	<div class="container">
@@ -17,7 +24,33 @@
 		
 		<div class="col-sm-12">
 			<div class="col-sm-6" style="float: left"><img src="./assets/images/rail-line-logo2.png" id="trainIllus"></div>
-			<div class="col-sm-6" id="currentTime" align="center" style="float: right;">Current Time</div>
+			<div class="col-sm-6" id="currentTime" align="center" style="float: right;">
+			<!-- start clock -->
+				<div class="center-block" id="clock">
+					<!-- time with am/pm updated every 30 seconds -->
+					<div id="clock-time">
+					</div>
+					<!-- date written out -->
+					<div id="clock-date">
+					</div>
+					<!-- lower half -->
+					<div id="clock-lower">
+						<!-- weather container -->
+						<div id="weatherBox">
+							<h4 id="weather-holder">Sunny - 70°</h4>
+							<p id="weather-recommended">It's nice out!</p>
+							<p id="weather-weekday"></p>
+						</div>
+						<!-- side icons -->
+						<div id="weather-icons">
+							<img id="weather-icon" src="http://icons.wxug.com/i/c/k/partlycloudy.gif">
+						</div>
+						<div id="weather-float-clear">
+						</div>
+					</div>
+				</div>
+				<!-- end clock -->
+			</div>
 		</div>
 			
 	<div class="row"></div>
