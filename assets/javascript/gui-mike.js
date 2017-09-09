@@ -1,5 +1,5 @@
-// function update() {
-//   $("#currentTime").text(moment().format('MMMM Do, YYYY | h:mm:ss A'));
-// }
+function update() {
+  $("#currentTime").text(moment().format('MMMM Do, YYYY | h:mm:ss A'));
+}
 
-// setInterval(update, 1000);
+setInterval(update, 1000);
