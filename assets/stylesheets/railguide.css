@@ -32,79 +32,22 @@ label {
 	margin-top: 10px;
 }
 
-#widgets {
-	display: flex;
-	position: relative;
-	margin-top: 40px;
-	text-align: center;
-	flex-wrap: wrap;
-	justify-content: center;
-	}	
-
-.widget1 img{
-width: 75%;
-background-color: rgb(66,66,66);
-border-radius: 25px;
-padding: 10px;
-border: 2px solid #fff;
-}
-
-.widget1:hover img{
-background-color: green;
-border-radius: 25px;
-padding: 20px;
-}
-
-.widget2 img{
-width: 75%;
-background-color: rgb(66,66,66);
-border-radius: 25px;
-padding: 10px;
-border: 2px solid #fff;
-}
-
-.widget2:hover img{
-background-color: green;
-border-radius: 25px;
-padding: 20px;
-}
-
-.widget3 img{
-width: 75%;
-background-color: rgb(66,66,66);
-border-radius: 25px;
-padding: 10px;
-border: 2px solid #fff;
-}
-
-.widget3:hover img{
-background-color: green;
-border-radius: 25px;
-padding: 20px;
-}
-
-.widget4 img{
-width: 75%;
-background-color: rgb(66,66,66);
-border-radius: 25px;
-padding: 10px;
-border: 2px solid #fff;
-}
-
-.widget4:hover img{
-background-color: green;
-border-radius: 25px;
-padding: 20px;
-}
-
+.widget1 img,
+.widget2 img,
+.widget3 img,
+.widget4 img,
 .widget5 img{
-width: 75%;
+width: 60%;
 background-color: rgb(66,66,66);
 border-radius: 25px;
 padding: 10px;
 border: 2px solid #fff;
 }
 
+.widget1:hover img,
+.widget2:hover img,
+.widget3:hover img,
+.widget4:hover img,
 .widget5:hover img{
 background-color: green;
 border-radius: 25px;
@@ -180,12 +123,13 @@ padding: 20px;
 #newsGoesHere div {
 	margin-top: 50px;
 	padding: 30px;
-/*	display: inline-block;*/
+	display: inline-block;
 	background-color: rgb(66,66,66);
 	border-radius: 30px;
 	width: 70%;
-	border: 2px solid #fff;
+/*	border: 2px solid #fff;*/
 	font-size: 38px;
+	text-align: center;
 	line-height: 1.2em;
 	font-family: Unna;
 	text-transform: uppercase;
@@ -193,9 +137,11 @@ padding: 20px;
 }
 
 #newsGoesHere img {
-	max-width: 48%;
+	max-width: 100%;
 	border-radius: 30px;
 	border: 6px solid #fff;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 a {
@@ -247,8 +193,11 @@ margin-right: auto;
 .widget4 img,
 .widget5 img {
 
-	margin-top: 30px;
-	width: 40%;
+	margin-top: 10px !important;
+	width: 20% !important;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #trainIllus2 {
