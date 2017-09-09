@@ -1,8 +1,3 @@
-/*.clock-widget {
-	background: url(http://i0.wp.com/blog.wallsrepublic.com/wp-content/uploads/2014/06/white_wallpaper.jpg?resize=594%2C594) repeat center;
-}
-*/
-
 #currentTime {
 	font-family: HelveticaNeue-UltraLight;
 	font-size: 26px;
@@ -24,29 +19,25 @@
 
 #clock-time {
 	text-align: center;
-	vertical-align: middle;
-	line-height: 30pt;
-	margin: 5pt 10pt 0pt 10pt;
-	padding: 1px;
-	border-radius: 50pt;
+/*	vertical-align: middle;*/
+/*	line-height: 30pt;*/
+	margin: 7px auto 7px auto;
+/*	padding: 5px;*/
+	border-radius: 50px;
 	color: white;
 	background-color: rgb(66,66,66); 
-	font-size: 23pt;
-	font-family: 'Zilla Slab', serif;
-	font-weight: bolder;
+	font-size: 32px;
+	font-family: 'PT Sans Narrow', serif;
 }
 
 #clock-date {
 	text-align: center;
 	vertical-align: middle;
-	line-height: 15pt;
 	border-bottom: 4pt double orange;
 	margin-top: 10pt;
-
-	color: black;
-
+	color: rgb(66,66,66);
 	font-size: 18pt;
-	font-family: 'Zilla Slab', serif;
+	font-family: 'PT Sans Narrow', serif;
 }
 
 #clock-lower {
@@ -65,14 +56,15 @@
 
 #weather-holder {
 	font-weight: bolder;
-	font-size: 18pt;
-	font-family: 'Zilla Slab', serif;
-	line-height: 5pt;
+	font-size: 22pt;
+	font-family: 'PT Sans Narrow', serif;
+	line-height: 9pt;
+	font-weight: 700;
 }
 
 #weather-recommended {
 	font-size: 16pt;
-	font-family: 'Zilla Slab', serif;
+	font-family: 'PT Sans Narrow', serif;
 }
 
 #weather-float-clear {
