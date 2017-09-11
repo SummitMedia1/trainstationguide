@@ -10,31 +10,51 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="assets/javascript/gps.js"></script>
     <title>GPS</title>
 
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
-        /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
         #map {
             height: 100%;
         }
-        /* Optional: Makes the sample page fill the window. */
         html,
         body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
+        .navbar { 
+            color: #FF6100;
+            background-color: #323232;
+            margin-bottom: 0;
+            border:none;
+            border-radius: 0; 
+            padding-bottom:5px;
+        }
+        .class h2 {
+            color: #FF6100;
+        }
     </style>
 
 </head>
 
 <body>
-
-    <div id="map"></div>\
-    <script type="text/javascript" src="./assets/javascript/gps.js"></script>
+<div id="header">
+    <nav class="navbar navbar-default ">
+        <div id="masthead" class="container">
+            <div class="navbar-header col-md-12">
+                <h3 class="navbar text-center ">Click a marker to get directions!</h3>
+            </div>
+        </div>
+    </nav>
+</div>
+    <div id="map">
+ 
+    </div>
+   
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtPTuKD9vGle4hFyxNxKTsqrOZUYEwcIk&callback=initMap">
     </script>
 
