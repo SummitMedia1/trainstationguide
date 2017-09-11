@@ -2,7 +2,7 @@
 	font-family: HelveticaNeue-UltraLight;
 	font-size: 26px;
 	text-align: center;
-	background-color: #ffffff;
+	background-color: #fff;
 	color: rgb(67,67,67);
 	border-radius: 30px;
 	width: 38%;
@@ -13,16 +13,14 @@
 
 
 #clock {
-	width: 95%;
-	height: 95%;
+	width: 92%;
+	height: 92%;
 }
 
 #clock-time {
 	text-align: center;
-/*	vertical-align: middle;*/
-/*	line-height: 30pt;*/
+	vertical-align: middle;
 	margin: 7px auto 7px auto;
-/*	padding: 5px;*/
 	border-radius: 50px;
 	color: white;
 	background-color: rgb(66,66,66); 
@@ -33,7 +31,7 @@
 #clock-date {
 	text-align: center;
 	vertical-align: middle;
-	border-bottom: 4pt double orange;
+	border-bottom: 4pt double #ff8000;
 	margin-top: 10pt;
 	color: rgb(66,66,66);
 	font-size: 18pt;
@@ -56,9 +54,9 @@
 
 #weather-holder {
 	font-weight: bolder;
-	font-size: 22pt;
+	font-size: 28px;
 	font-family: 'PT Sans Narrow', serif;
-	line-height: 9pt;
+	line-height: 10pt;
 	font-weight: 700;
 }
 
@@ -80,7 +78,7 @@
 	margin-right: auto;
 	margin-top: 10%;
 	margin-bottom: 5%;
-	padding: 0;
+	padding: 10px;
 }
 
 #clock-time {
@@ -93,7 +91,16 @@
 	width: 38%;
 }
 
+#weather-holder {
+	font-size: 24px;
+	line-height: 15px; 
+	margin-left: auto;
+	margin-right: auto;
+
+
 #weather-recommended {
 	font-style: 9px !important;
+	margin-left: auto;
+	margin-right: auto;
 }
 }

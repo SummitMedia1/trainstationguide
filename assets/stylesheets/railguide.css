@@ -32,26 +32,40 @@ label {
 	margin-top: 10px;
 }
 
+#submit {
+	margin-top: 35px;
+	width: auto%;
+	border-radius: 20px;
+	border: 0;
+	background-color: #ff8000;
+	height: 35px;
+	font-family: PT Sans Narrow;
+	font-size: 20px;
+	color: rgb(66,66,66);
+}
+
+#submit:hover {
+	background-color: #ffe149;
+}
+
 .widget1 img,
 .widget2 img,
 .widget3 img,
-.widget4 img,
-.widget5 img{
-width: 60%;
+.widget4 img {
+width: 75%;
+margin-top: 20px;
 background-color: rgb(66,66,66);
-border-radius: 25px;
-padding: 10px;
+border-radius: 20px;
+padding: 20px;
 border: 2px solid #fff;
 }
 
 .widget1:hover img,
 .widget2:hover img,
 .widget3:hover img,
-.widget4:hover img,
-.widget5:hover img{
+.widget4:hover img {
 background-color: green;
-border-radius: 25px;
-padding: 20px;
+width: 73%;
 }
 
 #map {
@@ -160,7 +174,7 @@ margin-left: auto;
 margin-right: auto;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 768px) {
 
 #currentTime {
 	font-size: 15px !important;
@@ -187,17 +201,34 @@ margin-right: auto;
 	
 }
 
+#widgets {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+}
+
 .widget1 img,
 .widget2 img,
 .widget3 img,
-.widget4 img,
-.widget5 img {
+.widget4 img {
+	
+	border-radius: 15px;
+	float: left;
+	width: 45%;
+	margin-left: 10px;
+	margin-right: 10px;
+}
 
-	margin-top: 10px !important;
-	width: 20% !important;
-	clear: both;
-	margin-left: auto;
-	margin-right: auto;
+.widget1:hover img,
+.widget2:hover img,
+.widget3:hover img,
+.widget4:hover img {
+
+	border-radius: 15px;
+	float: left;
+	width: 45%;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #trainIllus2 {
@@ -206,7 +237,6 @@ margin-right: auto;
 
 #newsGoesHere div {
 	font-size: 18px;
-	font-family: Unna;
 	text-transform: uppercase;
 	color: #fff;
 }
@@ -251,3 +281,34 @@ margin-right: auto;
 	padding: 40px;
 	border: 2px solid;
 }
+
+@media only screen and (max-width: 520px) {
+
+.widget1 img,
+.widget2 img,
+.widget3 img,
+.widget4 img {
+	
+	border-radius: 15px;
+	float: left;
+	width: 35%;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 5px;
+}
+
+.widget1:hover img,
+.widget2:hover img,
+.widget3:hover img,
+.widget4:hover img {
+
+	border-radius: 15px;
+	float: left;
+	width: 35%;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 5px;
+}
+
+
+	}
