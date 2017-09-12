@@ -38,7 +38,7 @@ $("#submit").on("click", function(event) {
 				// review with html table setup
 				$("#sStation").text(startStationName);
 				$("#dStation").text(destinationStationName);
-				$("#tripInfo").show();
+				$("#tripInfo").fadeIn(1500).show();
 
 				if (startStationNum > destinationStationNum) {
 					console.log(" train is going south");
