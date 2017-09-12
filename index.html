@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Denver Transit Station Guide - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/stylesheets/railguide.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+<!--     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> -->
+
+    <!-- brendan's links -->
+    <link rel="stylesheet" href="./assets/stylesheets/clock.css">
+    <script src="./assets/javascript/moment.js"></script>
+	<script src="./assets/javascript/clock.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container">
+	<div class="row" style="margin-left: 0; margin-right: 0">
+		
+		<div class="col-sm-12">
+			<div class="col-sm-6" style="float: left"><img src="./assets/images/rail-line-logo2.png" id="trainIllus"></div>
+			<div class="col-sm-6" id="currentTime" align="center" style="float: right;">
+			<!-- start clock -->
+				<div class="center-block" id="clock">
+					<!-- time with am/pm updated every 30 seconds -->
+					<div id="clock-time">
+					</div>
+					<!-- date written out -->
+					<div id="clock-date">
+					</div>
+					<!-- lower half -->
+					<div class="row" id="clock-lower">
+						<!-- weather container -->
+						<div class="col-sm-8" id="weatherBox" style="margin-top: 14px">
+							<h4 id="weather-holder">Sunny - 70°</h4>
+							<p id="weather-recommended">It's nice out!</p>
+							<p id="weather-weekday"></p>
+						</div>
+						<!-- side icons -->
+						<div class="col-sm-4" id="weather-icons" style="margin-top: 7px">
+							<img id="weather-icon" src="http://icons.wxug.com/i/c/k/partlycloudy.gif">
+						</div>
+						<div id="weather-float-clear">
+						</div>
+					</div>
+				</div>
+				<!-- end clock here -->
+			</div>
+		</div>
+			
+	<div class="row"></div>
+		<div class="col-sm-12 form-group" style="background-color: rgb(66, 66, 66); padding: 30px; margin-bottom: 0; border-top-left-radius: 20px; border-top-right-radius: 20px">
+			<div class="col-sm-4">
+				  <label for="startStationLabel" style="color: #BFF268">Select Starting Station:</label>
+				  <select class="form-control" id="startingStation">
+					<option value="selectStation">Select Station:</option>
+					<option value="0">Littleton-Mineral</option>
+					<option value="1">Littleton-Downtown</option>
+					<option value="2">Oxford-City of Sheridan</option>	    
+					<option value="3">Englewood</option>
+					<option value="4">Evans</option>
+					<option value="5">I-25 & Broadway</option>
+					<option value="6">Alameda</option>
+					<option value="7">10th & Osage</option>
+					<option value="8">Auraria West</option>
+					<option value="9">Sports Authority Stadium</option>
+					<option value="10">Elitch/Pepsi Ctr.</option>
+					<option value="11">Union Station</option>
+					<option value="12">Colfax/Auraria</option>
+					<option value="13">Convention Center</option>
+					<option value="14">16th & California</option>
+					<option value="15">18th & California</option>
+					<option value="16">20th & Welton</option>
+					<option value="17">25th & Welton</option>
+					<option value="18">27th & Welton</option>
+					<option value="19">30th & Downing</option>
+				  </select>
+			</div>
+			<div class="col-sm-2">
+				  <label for="timeToStart" style="color: #BFF268">Approx. Start Time:</label>
+				  <select class="form-control" id="estStartTime">
+					<option value="selectStart">Select Time:</option>
+					<option value="0">3AM</option>
+					<option value="1">4AM</option>
+					<option value="2">5AM</option>	    
+					<option value="3">6AM</option>
+					<option value="4">7AM</option>
+					<option value="5">8AM</option>
+					<option value="6">9AM</option>
+					<option value="7">10AM</option>
+					<option value="8">11AM</option>
+					<option value="9">12PM</option>
+					<option value="10">1PM</option>
+					<option value="11">2PM</option>
+					<option value="12">3PM</option>
+					<option value="13">4PM</option>
+					<option value="14">5PM</option>
+					<option value="15">6PM</option>
+					<option value="16">7PM</option>
+					<option value="17">8PM</option>
+					<option value="18">9PM</option>
+					<option value="19">10PM</option>
+					<option value="20">11PM</option>
+					<option value="21">12AM</option>
+				  </select>
+			</div>
+			<div class="col-sm-4">
+				<label for="endStationLabel" style="color:#FF4444">Select Destination Station:</label>
+				  <select class="form-control" id="endingStation">
+				    <option value="selectStation">Select Station:</option>
+					<option value="0">Littleton-Mineral</option>
+					<option value="1">Littleton-Downtown</option>
+					<option value="2">Oxford-City of Sheridan</option>	    
+					<option value="3">Englewood</option>
+					<option value="4">Evans</option>
+					<option value="5">I-25 & Broadway</option>
+					<option value="6">Alameda</option>
+					<option value="7">10th & Osage</option>
+					<option value="8">Auraria West</option>
+					<option value="9">Sports Authority Stadium</option>
+					<option value="10">Elitch/Pepsi Ctr.</option>
+					<option value="11">Union Station</option>
+					<option value="12">Colfax/Auraria</option>
+					<option value="13">Convention Center</option>
+					<option value="14">16th & California</option>
+					<option value="15">18th & California</option>
+					<option value="16">20th & Welton</option>
+					<option value="17">25th & Welton</option>
+					<option value="18">27th & Welton</option>
+					<option value="19">30th & Downing</option>
+				  </select>
+			</div>
+						<div class="col-sm-2">
+				  <label for="timeToArrive" style="color: #FF4444">Approx. Arrival Time:</label>
+				  <select class="form-control" id="estArrivalTime">
+					<option value="selectArrival">Select Time:</option>
+					<option value="0">3AM</option>
+					<option value="1">4AM</option>
+					<option value="2">5AM</option>	    
+					<option value="3">6AM</option>
+					<option value="4">7AM</option>
+					<option value="5">8AM</option>
+					<option value="6">9AM</option>
+					<option value="7">10AM</option>
+					<option value="8">11AM</option>
+					<option value="9">12PM</option>
+					<option value="10">1PM</option>
+					<option value="11">2PM</option>
+					<option value="12">3PM</option>
+					<option value="13">4PM</option>
+					<option value="14">5PM</option>
+					<option value="15">6PM</option>
+					<option value="16">7PM</option>
+					<option value="17">8PM</option>
+					<option value="18">9PM</option>
+					<option value="19">10PM</option>
+					<option value="20">11PM</option>
+					<option value="21">12AM</option>
+				  </select>
+			</div>
+			<div class="row"></div>
+			<div class="col-sm-4" style="padding: 0"></div>
+			<button class="col-sm-4" value="submit" id="submit">Go!</button>
+			<div class="col-sm-4" style="padding: 0"></div>
+	</div>
+</div>		
+<div class="container" id="map" align="center">
+<div class="col-sm-7"><img src="./assets/images/Map-Illustrator-C_D.png" id="imgMap"></div>
+<div class="col-sm-5">
+	<div class="col-sm-12 departure" style="margin-top: 40px; height: auto" id="tripInfo">
+			<table class="col-sm-6" style="height: auto">
+				<th style="height: 30px; padding: 0">Departing from:</th></tr>
+				<tr style="height: 30px; padding: 0"><td id ="sStation">Station Name</td></tr>
+				<tr style="height: 10px; padding: 0"></tr>
+				<tr style="height: 30px; padding: 0"><td id ="sTrain1">Data Return 1</td></tr>
+				<tr style="height: 30px; padding: 0"><td id ="sTrain2">Data Return 2</td></tr>
+				<tr style="height: 30px; padding: 0"><td id ="sTrain3">Data Return 3</td></tr>
+			</table>
+			<table class="col-sm-6" style="height: auto">
+				<th style="height: 30px; padding: 0">Arriving at:</th></tr>
+				<tr style="height: 30px; padding: 0"><td id="dStation">Station Name</td></tr>
+				<tr style="height: 10px; padding: 0"></tr>
+				<tr style="height: 30px; padding: 0"><td id ="dTrain1">Data Return 1</td></tr>
+				<tr style="height: 30px; padding: 0"><td id ="dTrain2">Data Return 2</td></tr>
+				<tr style="height: 30px; padding: 0"><td id ="dTrain3">Data Return 3</td></tr>
+			</table>
+
+
+	</div>
+</div>
+</div>
+
+
+
+<div class="row" style="margin-top: 40px" align="center"></div>
+	
+	<div class="container">
+		<div class="col-sm-3 widget1" id="widgets"><a href="gps.html" target="_blank"><img src="./assets/images/whereAm-widget.png"></a></div>
+		<div class="col-sm-3 widget2" id="widgets"><img src="./assets/images/alarm-widget.png"></div>
+		<div class="col-sm-3 widget3" id="widgets"><a href="newsfeed.html" target="_blank"><img src="./assets/images/newsfeed-widget.png"></a></div>
+		<div class="col-sm-3 widget4" id="widgets"><img src="./assets/images/phone2-widget.png"></div>
+	</div>	
+
+
+<div class="row" style="height: 50px; background-color: transparent"></div>
+	
+</div>
+</div> <!-- Main Container Close -->
+<script src="./assets/javascript/newsfeed.js"></script>
+<script src="./assets/javascript/gps.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/javascript/data.js"></script>
+</body>
+</html>
