@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/stylesheets/railguide.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
 <!--     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> -->
 
@@ -166,7 +166,7 @@
 			<div class="row"></div>
 			<div class="col-sm-4" style="padding: 0"></div>
 			<button class="col-sm-4" value="submit" id="submit">Go!</button>
-			<div class="col-sm-4" style="padding: 0"></div>
+			<button class="col-sm-2" value="reset" id="reset" style="padding: 0">Reset</button>
 	</div>
 </div>		
 <div class="container" id="map" align="center">
@@ -174,20 +174,20 @@
 <div class="col-sm-5">
 	<div class="col-sm-12 departure" style="margin-top: 40px; height: auto" id="tripInfo">
 			<table class="col-sm-6" style="height: auto">
-				<th style="height: 30px; padding: 0">Departing from:</th></tr>
-				<tr style="height: 30px; padding: 0"><td id ="sStation">Station Name</td></tr>
-				<tr style="height: 10px; padding: 0"></tr>
-				<tr style="height: 30px; padding: 0"><td id ="sTrain1">Data Return 1</td></tr>
-				<tr style="height: 30px; padding: 0"><td id ="sTrain2">Data Return 2</td></tr>
-				<tr style="height: 30px; padding: 0"><td id ="sTrain3">Data Return 3</td></tr>
+				<th style="height: 30px"; padding: 8px">Departing from:</th></tr>
+				<tr style="height: 30px"><td id ="sStation" style="font-size: 16px;font-weight: 600">Station Name</td></tr>
+<!-- 				<tr style="height: 10px; padding: 0"></tr> -->
+				<tr style="height: 30px"><td id ="sTrain1">Data Return 1</td></tr>
+				<tr style="height: 30px"><td id ="sTrain2">Data Return 2</td></tr>
+				<tr style="height: 30px"><td id ="sTrain3">Data Return 3</td></tr>
 			</table>
 			<table class="col-sm-6" style="height: auto">
-				<th style="height: 30px; padding: 0">Arriving at:</th></tr>
-				<tr style="height: 30px; padding: 0"><td id="dStation">Station Name</td></tr>
-				<tr style="height: 10px; padding: 0"></tr>
-				<tr style="height: 30px; padding: 0"><td id ="dTrain1">Data Return 1</td></tr>
-				<tr style="height: 30px; padding: 0"><td id ="dTrain2">Data Return 2</td></tr>
-				<tr style="height: 30px; padding: 0"><td id ="dTrain3">Data Return 3</td></tr>
+				<th style="height: 30px">Arriving at:</th></tr>
+				<tr style="height: 30px; padding: 8px"><td id="dStation" style="font-size: 16px;font-weight: 600"><strong>Station Name</strong></td></tr>
+<!-- 				<tr style="height: 10px; padding: 0"></tr> -->
+				<tr style="height: 30px"><td id ="dTrain1">Data Return 1</td></tr>
+				<tr style="height: 30px"><td id ="dTrain2">Data Return 2</td></tr>
+				<tr style="height: 30px"><td id ="dTrain3">Data Return 3</td></tr>
 			</table>
 
 
@@ -211,7 +211,30 @@
 	
 </div>
 </div> <!-- Main Container Close -->
+ <script>
+  $( function() {
+    var state = true;
+    $( "#submit" ).on( "click", function() {
+      if ( state ) {
+        $( "#tripInfoWindow" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff",
+          width: 500
+        }, 25);
+      } else {
+        $( "#tripInfoWindow" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240
+        }, 10);
+      }
+      state = !state;
+    });
+  } );
+  </script>
+<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 <script src="./assets/javascript/newsfeed.js"></script>
+<script src="./assets/javascript/gui-mike.js"></script>
 <script src="./assets/javascript/gps.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
