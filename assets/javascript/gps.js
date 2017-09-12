@@ -9,8 +9,10 @@ function initMap() {
             var options = {
                 zoom: 12,
                 center: {
-                    lat: 39.5800,
-                    lng: -105.0251
+
+                    lat: 39.6778,
+                    lng: -104.9927
+
                 }
             };
 
