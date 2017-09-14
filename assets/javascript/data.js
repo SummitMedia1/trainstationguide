@@ -42,7 +42,7 @@ $("#submit").on("click", function(event) {
 				startStationNum = parseInt($("#startingStation option:selected").val().trim());
 				destinationStationName = $("#endingStation option:selected").text().trim();
 				destinationStationNum = parseInt($("#endingStation option:selected").val().trim());
-				estArrivalTime = $("#estartingStationtartTime option:selected").val().trim();
+				estArrivalTime = $("#estartingStationtartTime option:selected").val();
 
 
 				console.log("****************** "+ estArrivalTime + "*****************");
