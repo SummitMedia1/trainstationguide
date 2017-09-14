@@ -15,6 +15,7 @@
                 var keydata = []; 
                 var destInfo = '';
                 var key = '';
+                var estArrivalTime;
 
                 // Initialize Firebase
   var config = {
@@ -41,18 +42,26 @@ $("#submit").on("click", function(event) {
 				startStationNum = parseInt($("#startingStation option:selected").val().trim());
 				destinationStationName = $("#endingStation option:selected").text().trim();
 				destinationStationNum = parseInt($("#endingStation option:selected").val().trim());
-				estTravelTime = parseInt($("#estartingStationtartTime option:selected").val().trim());
+				estArrivalTime = $("#estartingStationtartTime option:selected").val().trim();
+
+
+				console.log("****************** "+ estArrivalTime + "*****************");
                 // Get current Time from desktop 
-                var n = (new Date()).getHours();
-			
-                if (n < 12) {
-			
-				currTime = moment($.now()).format("H:mm:ss").trim();
-			} else {
-				
-				currTime = moment($.now()).format("HH:mm:ss").trim();
+
+                if (estArrivalTime == "selectStart") {
+		                var n = (new Date()).getHours();
+					
+		                if (n < 12) {
+					
+						currTime = moment($.now()).format("H:mm:ss").trim();
+					} else {
+						
+						currTime = moment($.now()).format("HH:mm:ss").trim();
+						}
+				}else{
+					currTime = estArrivalTime;
 				}
-	
+
 				// console.log("Start station = " + startStationName);
 				// console.log("start station num = " + startStationNum);
 				// console.log("end  station = " + destinationStationName );
@@ -271,6 +280,7 @@ function getSBDestInfo(key){
 	 $("#sTrain1").text(list[0]);
 	 $("#sTrain2").text(list[1]);
 	 $("#sTrain3").text(list[2]);
+      
 	}
 
 	 function dlistArray() {
@@ -349,3 +359,4 @@ function getSBDestInfo(key){
 				console.log("returning " + stationName);
              return stationName;
 }
+   
