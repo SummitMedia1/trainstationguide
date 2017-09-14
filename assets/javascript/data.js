@@ -1,4 +1,4 @@
-  $("#tripInfo").hide();
+$("#tripInfo").hide();
   var startStationName = "";
 				var startStationNum = "";
 				var destinationStationName = "";
@@ -359,4 +359,3 @@ function getSBDestInfo(key){
 				console.log("returning " + stationName);
              return stationName;
 }
-   
