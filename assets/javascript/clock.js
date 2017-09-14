@@ -26,7 +26,7 @@ function clockSet() {
 
 function weatherSet() {
 	var APIKey = "62cb8cf1fb24944a942c172397d1b3ce";
-	var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=Denver&appid=" + APIKey;
+	var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=Denver&appid=" + APIKey;
 	$.ajax({
 		url: weatherURL,
 		method: "GET"
@@ -41,7 +41,7 @@ function weatherWrite(x) {
 	var conditions = x.weather[0].description.charAt(0).toUpperCase() + x.weather[0].description.slice(1);
 
 	$("#weather-holder").html(conditions + " " + temp + "°");
-	$("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + weatherIcon);
+	$("#weather-icon").attr("src", "https://openweathermap.org/img/w/" + weatherIcon);
 	if (temp > 80) {
 		$("#weather-recommended").html("Good " + weatherDayNight + " for shorts!");
 	} else if (temp < 50) {
