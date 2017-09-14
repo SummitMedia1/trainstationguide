@@ -7,7 +7,7 @@ function initMap() {
             // var contentString = '<div id="content">'+ "<a href='http://maps.google.com/?saddr=Your+location&daddr=Littleton+Mineral+Station,CO'>Get Directions</a>" + '</div>'; 
             var contentString;
             var options = {
-                zoom: 12,
+                zoom: 10,
                 center: {
 
                     lat: 39.6778,
@@ -230,7 +230,7 @@ function initMap() {
                     console.log(pos);
 
                     infoWindow.setPosition(pos);
-                    infoWindow.setContent('You are here.');
+                    infoWindow.setContent('<h3>You are here.</h3>');
                     infoWindow.open(map);
                     map.setCenter(pos);
                 }, function() {
@@ -241,3 +241,5 @@ function initMap() {
             }
 
         }
+
+        

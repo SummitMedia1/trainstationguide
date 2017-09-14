@@ -1,5 +1,4 @@
-
-  $("#tripInfo").hide();
+$("#tripInfo").hide();
   var startStationName = "";
 				var startStationNum = "";
 				var destinationStationName = "";

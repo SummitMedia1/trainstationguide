@@ -7,9 +7,7 @@ var weatherDayNight;
 function clockWidgetStart() {
 	clockSet();
 	setInterval(clockSet, 1000);
-
-	// comment this line out to prevent excess ajax calls
-	// weatherSet();
+	weatherSet();
 }
 
 function clockSet() {
@@ -27,26 +25,29 @@ function clockSet() {
 }
 
 function weatherSet() {
-	var weatherCity = "Denver";
-	var weatherURL = "http://api.wunderground.com/api/ddf5a7c71b542ac1/hourly/q/CO/Denver.json";
+	var APIKey = "62cb8cf1fb24944a942c172397d1b3ce";
+	var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=Denver&appid=" + APIKey;
 	$.ajax({
 		url: weatherURL,
 		method: "GET"
 	}).done(function(response) {
-		console.log(response);
 		weatherWrite(response);
 	});
 }
 
 function weatherWrite(x) {
-	$("#weather-holder").html(x.hourly_forecast[0].condition + " - " + x.hourly_forecast[0].feelslike.english + "°");
-	$("#weather-icon").attr("src", x.hourly_forecast[0].icon_url);
-	if (x.hourly_forecast[0].feelslike.english > 80) {
+	var weatherIcon = x.weather[0].icon.replace(/.$/,"d") + ".png";
+	var temp = Math.floor(1.8 * (x.main.temp - 273) + 32);
+	var conditions = x.weather[0].description.charAt(0).toUpperCase() + x.weather[0].description.slice(1);
+
+	$("#weather-holder").html(conditions + " " + temp + "°");
+	$("#weather-icon").attr("src", "https://openweathermap.org/img/w/" + weatherIcon);
+	if (temp > 80) {
 		$("#weather-recommended").html("Good " + weatherDayNight + " for shorts!");
-	} else if (x.hourly_forecast[0].feelslike.english < 50) {
+	} else if (temp < 50) {
 		$("#weather-recommended").html("Bring a jacket!");
 	} else {
-		$("#weather-recommended").html("Pretty mild out.");
+		$("#weather-recommended").html("Pretty nice out.");
 	}
 }
 
