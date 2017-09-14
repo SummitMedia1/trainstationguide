@@ -97,8 +97,8 @@ border: 2px solid #fff;
 
 .widget1:hover img,
 .widget2:hover img,
-.widget3:hover img,
-.widget4:hover img {
+.widget3:hover img
+/*.widget4:hover img*/ {
 background-color: green;
 width: 73%;
 }
