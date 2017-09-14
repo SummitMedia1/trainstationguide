@@ -27,7 +27,7 @@ table {
     width: 100%;
 }
 
-th, td {
+td {
     text-align: left;
     padding: 10px;
 }
