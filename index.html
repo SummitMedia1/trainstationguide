@@ -82,9 +82,9 @@
 					<option value="19">30th & Downing</option>
 				  </select>
 			</div>
-			<div class="col-sm-2">
+				<div class="col-sm-2">
 				  <label for="timeToStart" style="color: #BFF268">Approx. Start Time:</label>
-				  <select class="form-control" id="estStartTime">
+				  <select class="form-control" id="estartingStationtartTime">
 					<option value="selectStart">Select Time:</option>
 					<option value="03:00:00">3AM</option>
 					<option value="04:00:00">4AM</option>
@@ -107,7 +107,7 @@
 					<option value="21:00:00">9PM</option>
 					<option value="22:00:00">10PM</option>
 					<option value="23:00:00">11PM</option>
-					<option value="24:00:00">12AM</option>
+					<option value="23:59:59">12AM</option>
 				  </select>
 			</div>
 			<div class="col-sm-4">
@@ -174,23 +174,22 @@
 </div>		
 <div class="container" id="map" align="center">
 <div class="col-sm-7"><img src="./assets/images/Map-Illustrator-C_D.png" id="imgMap"></div>
-<div class="col-sm-5">
-	<div class="col-sm-12 departure" style="margin-top: 40px; height: auto" id="tripInfo">
+<div class="col-sm-12 departure" style="margin-top: 40px; height: auto" id="tripInfo">
 			<table class="col-sm-6" style="height: auto">
-				<th style="height: 30px"; padding: 8px">Departing from:</th></tr>
-				<tr style="height: 30px"><td id ="sStation" style="font-size: 14px;font-weight: 600">Station Name</td></tr>
-<!-- 				<tr style="height: 10px; padding: 0"></tr> -->
-				<tr style="height: 30px"><td id ="sTrain1">Data Return 1</td></tr>
-				<tr style="height: 30px"><td id ="sTrain2">Data Return 2</td></tr>
-				<tr style="height: 30px"><td id ="sTrain3">Data Return 3</td></tr>
+				<th style="height: 30px; padding: 0">Departing from:</th></tr>
+				<tr style="height: 30px; padding: 0"><td id ="sStation">Station Name</td></tr>
+				<tr style="height: 10px; padding: 0"></tr>
+				<tr style="height: 30px; padding: 0"><td id ="sTrain1">Data Return 1</td></tr>
+				<tr style="height: 30px; padding: 0"><td id ="sTrain2">Data Return 2</td></tr>
+				<tr style="height: 30px; padding: 0"><td id ="sTrain3">Data Return 3</td></tr>
 			</table>
 			<table class="col-sm-6" style="height: auto">
-				<th style="height: 30px">Arriving at:</th></tr>
-				<tr style="height: 30px; padding: 8px"><td id="dStation" style="font-size: 14px;font-weight: 600"><strong>Station Name</strong></td></tr>
-<!-- 				<tr style="height: 10px; padding: 0"></tr> -->
-				<tr style="height: 30px"><td id ="dTrain1">Data Return 1</td></tr>
-				<tr style="height: 30px"><td id ="dTrain2">Data Return 2</td></tr>
-				<tr style="height: 30px"><td id ="dTrain3">Data Return 3</td></tr>
+				<th style="height: 30px; padding: 0">Arriving at:</th></tr>
+				<tr style="height: 30px; padding: 0"><td id="dStation">Station Name</td></tr>
+				<tr style="height: 10px; padding: 0"></tr>
+				<tr style="height: 30px; padding: 0"><td id ="dTrain1">Data Return 1</td></tr>
+				<tr style="height: 30px; padding: 0"><td id ="dTrain2">Data Return 2</td></tr>
+				<tr style="height: 30px; padding: 0"><td id ="dTrain3">Data Return 3</td></tr>
 			</table>
 
 
