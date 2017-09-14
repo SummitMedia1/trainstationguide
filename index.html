@@ -9,7 +9,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-<!--     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> -->
 
     <!-- brendan's links -->
     <link rel="stylesheet" href="./assets/stylesheets/clock.css">
@@ -25,6 +24,7 @@
 		<div class="col-sm-12">
 			<div class="col-sm-6" style="float: left"><img src="./assets/images/rail-line-logo2.png" id="trainIllus"></div>
 			<div class="col-sm-6" id="currentTime" align="center" style="float: right;">
+			
 			<!-- start clock -->
 				<div class="center-block" id="clock">
 					<!-- time with am/pm updated every 30 seconds -->
@@ -50,6 +50,7 @@
 					</div>
 				</div>
 				<!-- end clock here -->
+			
 			</div>
 		</div>
 			
@@ -85,28 +86,28 @@
 				  <label for="timeToStart" style="color: #BFF268">Approx. Start Time:</label>
 				  <select class="form-control" id="estStartTime">
 					<option value="selectStart">Select Time:</option>
-					<option value="0">3AM</option>
-					<option value="1">4AM</option>
-					<option value="2">5AM</option>	    
-					<option value="3">6AM</option>
-					<option value="4">7AM</option>
-					<option value="5">8AM</option>
-					<option value="6">9AM</option>
-					<option value="7">10AM</option>
-					<option value="8">11AM</option>
-					<option value="9">12PM</option>
-					<option value="10">1PM</option>
-					<option value="11">2PM</option>
-					<option value="12">3PM</option>
-					<option value="13">4PM</option>
-					<option value="14">5PM</option>
-					<option value="15">6PM</option>
-					<option value="16">7PM</option>
-					<option value="17">8PM</option>
-					<option value="18">9PM</option>
-					<option value="19">10PM</option>
-					<option value="20">11PM</option>
-					<option value="21">12AM</option>
+					<option value="03:00:00">3AM</option>
+					<option value="04:00:00">4AM</option>
+					<option value="05:00:00">5AM</option>	    
+					<option value="06:00:00">6AM</option>
+					<option value="07:00:00">7AM</option>
+					<option value="08:00:00">8AM</option>
+					<option value="09:00:00">9AM</option>
+					<option value="10:00:00">10AM</option>
+					<option value="11:00:00">11AM</option>
+					<option value="12:00:00">12PM</option>
+					<option value="13:00:00">1PM</option>
+					<option value="14:00:00">2PM</option>
+					<option value="15:00:00">3PM</option>
+					<option value="16:00:00">4PM</option>
+					<option value="17:00:00">5PM</option>
+					<option value="18:00:00">6PM</option>
+					<option value="19:00:00">7PM</option>
+					<option value="20:00:00">8PM</option>
+					<option value="21:00:00">9PM</option>
+					<option value="22:00:00">10PM</option>
+					<option value="23:00:00">11PM</option>
+					<option value="24:00:00">12AM</option>
 				  </select>
 			</div>
 			<div class="col-sm-4">
@@ -135,7 +136,9 @@
 					<option value="19">30th & Downing</option>
 				  </select>
 			</div>
-						<div class="col-sm-2">
+
+			<button class="col-sm-2" value="reset" id="reset" style="padding: 0">Reset</button>
+<!-- 						<div class="col-sm-2">
 				  <label for="timeToArrive" style="color: #FF4444">Approx. Arrival Time:</label>
 				  <select class="form-control" id="estArrivalTime">
 					<option value="selectArrival">Select Time:</option>
@@ -162,11 +165,11 @@
 					<option value="20">11PM</option>
 					<option value="21">12AM</option>
 				  </select>
-			</div>
+			</div> -->
 			<div class="row"></div>
 			<div class="col-sm-4" style="padding: 0"></div>
 			<button class="col-sm-4" value="submit" id="submit">Go!</button>
-			<button class="col-sm-2" value="reset" id="reset" style="padding: 0">Reset</button>
+			
 	</div>
 </div>		
 <div class="container" id="map" align="center">
@@ -211,28 +214,7 @@
 	
 </div>
 </div> <!-- Main Container Close -->
- <script>
-  $( function() {
-    var state = true;
-    $( "#submit" ).on( "click", function() {
-      if ( state ) {
-        $( "#tripInfoWindow" ).animate({
-          backgroundColor: "#aa0000",
-          color: "#fff",
-          width: 500
-        }, 25);
-      } else {
-        $( "#tripInfoWindow" ).animate({
-          backgroundColor: "#fff",
-          color: "#000",
-          width: 240
-        }, 10);
-      }
-      state = !state;
-    });
-  } );
-  </script>
-<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="./assets/javascript/clock.js"></script>
 <script src="./assets/javascript/newsfeed.js"></script>
 <script src="./assets/javascript/gui-mike.js"></script>
 <script src="./assets/javascript/gps.js"></script>
