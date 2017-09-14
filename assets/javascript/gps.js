@@ -230,7 +230,7 @@ function initMap() {
                     console.log(pos);
 
                     infoWindow.setPosition(pos);
-                    infoWindow.setContent('<h2>You are here.</h2>');
+                    infoWindow.setContent('<h3>You are here.</h3>');
                     infoWindow.open(map);
                     map.setCenter(pos);
                 }, function() {
