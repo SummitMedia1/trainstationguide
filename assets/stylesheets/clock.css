@@ -49,7 +49,7 @@
 }
 
 #weather-icon {
-	width: 85%;
+	width: 100%;
 }
 
 #weather-holder {
@@ -69,6 +69,12 @@
 	clear: left;
 }
 
+@media only screen and (max-width: 768px) {
+    #weather-icon {
+        width: 36%;
+    }
+}
+
 @media only screen and (max-width: 640px) {
 
 #currentTime {
@@ -83,12 +89,8 @@
 
 #clock-time {
 	font-size: 13pt;
-	padding: 1px !important;
+/*	padding: 1px !important;*/
 	border-radius: 40px;
-}
-
-#weather-icon {
-	width: 38%;
 }
 
 #weather-holder {
