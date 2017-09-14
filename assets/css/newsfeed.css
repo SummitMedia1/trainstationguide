@@ -1,0 +1,29 @@
+#Reddit {
+	background-image: url('../images/if_reddit_291684.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 5px solid white;
+	border-radius: 40px;
+	width: 50%;
+	height: 80%;
+/*	background-size: cover;*/
+	color: red;
+}
+
+#ESPN {
+	background-image: url(../images/Espn_125px_538863_easyicon.net.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 5px solid white;
+	width: 50%;
+	height: 80%;
+	border-radius: 40px;
+/*	background-size: cover;*/
+
+
+}
+
+a {
+	width: 100px;
+	height: 100px;
+}

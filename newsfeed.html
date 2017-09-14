@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News Feed Transit Station Guide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="./assets/stylesheets/railguide.css">
+	<script src="./assets/javascript/gui-mike.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+		<div class="jumbotron" style="width: 100%; margin-bottom: 20px">
+			<img src="./assets/images/newsfeed.png" id="newsFeedID">
+		</div>
+			
+			<div class="col-sm-12" id="currentTime" style="font-family: PT Sans Narrow; text-align: center; width: 100%; font-size: 32px; margin-top: 0; margin-bottom: 20px; padding: 10px; background-color: transparent; color: #fff">Current Time</div>
+			<div class="row" style="margin: 0"></div>
+			<div class="col-sm-12" id="newsFeedButtonContainer" align="center">	
+			<div class="col-sm-6" align="center">
+				<h3 style="color:#ffe149; padding: 15px">Top 10 Daily<br />News Articles</h3>
+					<button id='Reddit'></button>
+			</div>				
+			<div class="col-sm-6" align="center">
+				<h3 style="color:#fff; padding: 15px">Top Sports News<br />of the Day</h3>
+					<button id='ESPN'></button>
+			</div>		
+			</div>
+			</div>		
+	
+		</div>
+
+	<div class="container">
+		<div class="row">
+			
+			<div id="newsGoesHere" align='center'></div>
+			
+		</div>
+	</div>
+
+<div class="row" style="margin-top: 50px" align="center">
+	<div class="container">
+		<div class="col-sm-3 widget1" id="widgets"><a href="gps.html" target="_blank"><img src="./assets/images/whereAm-widget.png"></a></div>
+		<div class="col-sm-3 widget2" id="widgets"><img src="./assets/images/alarm-widget.png"></div>
+		<div class="col-sm-3 widget3" id="widgets"><a href="newsfeed.html" target="_blank"><img src="./assets/images/newsfeed-widget.png"></a></div>
+		<div class="col-sm-3 widget4" id="widgets"><img src="./assets/images/phone2-widget.png"></div>
+	</div>
+</div>
+
+<div class="row" style="height: 50px; background-color: transparent"></div>
+
+</div>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/javascript/newsfeed.js"></script>
+</body>
+</html>

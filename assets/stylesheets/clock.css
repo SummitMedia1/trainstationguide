@@ -1,0 +1,106 @@
+#currentTime {
+	font-family: HelveticaNeue-UltraLight;
+	font-size: 26px;
+	text-align: center;
+	background-color: #fff;
+	color: rgb(67,67,67);
+	border-radius: 30px;
+	width: 38%;
+	margin-top: 2%;
+	margin-bottom: 7%;
+	padding: 8px;
+}
+
+
+#clock {
+	width: 92%;
+	height: 92%;
+}
+
+#clock-time {
+	text-align: center;
+	vertical-align: middle;
+	margin: 7px auto 7px auto;
+	border-radius: 50px;
+	color: white;
+	background-color: rgb(66,66,66); 
+	font-size: 32px;
+	font-family: 'PT Sans Narrow', serif;
+}
+
+#clock-date {
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: 4pt double #ff8000;
+	margin-top: 10pt;
+	color: rgb(66,66,66);
+	font-size: 18pt;
+	font-family: 'PT Sans Narrow', serif;
+}
+
+#clock-lower {
+	width: 100%;
+	height: 45%;
+	position: relative;
+	top: 0pt;
+	left: 5pt;
+
+	color: black;
+}
+
+#weather-icon {
+	width: 85%;
+}
+
+#weather-holder {
+	font-weight: bolder;
+	font-size: 28px;
+	font-family: 'PT Sans Narrow', serif;
+	line-height: 10pt;
+	font-weight: 700;
+}
+
+#weather-recommended {
+	font-size: 16pt;
+	font-family: 'PT Sans Narrow', serif;
+}
+
+#weather-float-clear {
+	clear: left;
+}
+
+@media only screen and (max-width: 640px) {
+
+#currentTime {
+	width: 70% !important;
+	border-radius: 22px !important;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	margin-bottom: 5%;
+	padding: 10px;
+}
+
+#clock-time {
+	font-size: 13pt;
+	padding: 1px !important;
+	border-radius: 40px;
+}
+
+#weather-icon {
+	width: 38%;
+}
+
+#weather-holder {
+	font-size: 24px;
+	line-height: 15px; 
+	margin-left: auto;
+	margin-right: auto;
+
+
+#weather-recommended {
+	font-style: 9px !important;
+	margin-left: auto;
+	margin-right: auto;
+}
+}
