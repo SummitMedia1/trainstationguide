@@ -22,14 +22,21 @@ padding: 40px;
 margin-bottom: 30px;
 
 }
+
 table {
     border-collapse: collapse;
     width: 100%;
+    float: left;
+    position: fixed;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td {
     text-align: left;
-    padding: 10px;
+    padding-left: 12px;
 }
 
 tr:nth-child(odd){background-color: #bbe861}
@@ -41,13 +48,13 @@ table th {
 }
 
 label {
-	font-size: 11px;
-	font-weight: 400;
+	font-size: 10px;
+	font-weight: 800;
 }
 
-.form-control > option {
+/*.form-control > option {
 	margin-top: 10px;
-}
+}*/
 
 #submit {
 	margin-top: 35px;
@@ -77,30 +84,30 @@ label {
 	color: rgb(66,66,66);
 	margin-left: 4%;
 	margin-right: auto;
+	float: right;
 }
 
 #reset:hover {
 	background-color: #ff8000;
 }
 
-.widget1 img,
-.widget2 img,
-.widget3 img,
-.widget4 img {
-width: 75%;
+#widget1 img,
+#widget2 img,
+#widget3 img,
+#widget4 img {
+width: 80%;
 margin-top: 20px;
 background-color: rgb(66,66,66);
-border-radius: 20px;
-padding: 20px;
+border-radius: 18px;
+padding: 30px;
 border: 2px solid #fff;
 }
 
-.widget1:hover img,
-.widget2:hover img,
-.widget3:hover img
-/*.widget4:hover img*/ {
+#widget1:hover img,
+#widget2:hover img,
+#widget3:hover img {
 background-color: green;
-width: 73%;
+/*width: 78%;*/
 }
 
 #map {
@@ -117,13 +124,13 @@ width: 73%;
 #imgMap {
 	margin-top: 50px;
 	height: auto;
-	width: 60%;
+	width: 100%;
 	padding-bottom: 30px;
 
 }
 
 #trainIllus {
-	width: 70%;
+	width: 80%;
 	margin-top: 20px;
 	padding-bottom: 20px;
 	position: relative;
@@ -164,9 +171,8 @@ width: 73%;
   	border: 5px solid #fff;
 }
 
-#ESPN:hover, #Reddit:hover{
+#ESPN:hover, #Reddit:hover {
 	width: 55%; 
-
 }
 
 #newsGoesHere div {
@@ -176,12 +182,10 @@ width: 73%;
 	background-color: rgb(66,66,66);
 	border-radius: 30px;
 	width: 70%;
-/*	border: 2px solid #fff;*/
 	font-size: 42px;
 	text-align: center;
 	line-height: 1.2em;
 	font-family: PT Sans Narrow;
-/*	text-transform: uppercase;*/
 	color: #fff;
 }
 
@@ -193,11 +197,6 @@ width: 73%;
 	margin-right: auto;
 }
 
-/*a {
-	width: 100px;
-	height: 100px;
-}*/
-
 #newsFeedButtonContainer {
 border: 6px solid #fff;
 border-radius: 35px;
@@ -207,6 +206,28 @@ margin-bottom: 15px;
 width: 100% !important;
 margin-left: auto;
 margin-right: auto;
+}
+
+@media only screen and (max-width: 990px) {
+
+#widget1 img,
+#widget2 img,
+#widget3 img,
+#widget4 img {
+width: 90%;
+margin-top: 20px;
+background-color: rgb(66,66,66);
+border-radius: 18px;
+padding: 14px;
+border: 2px solid #fff;
+}
+
+#widget1:hover img,
+#widget2:hover img,
+#widget3:hover img {
+background-color: green;
+/*width: 78%;*/
+}
 }
 
 @media only screen and (max-width: 768px) {
@@ -231,39 +252,49 @@ margin-right: auto;
 #imgMap {
 	margin-top: 10px;
 	height: auto;
-	width: 80%;
-	padding-bottom: 5px;
+	width: 100%;
+	padding-bottom: 20px;
 	
 }
 
-#widgets {
-width: 100%;
-margin-left: auto;
-margin-right: auto;
+#widget1 img,
+#widget2 img,
+#widget3 img,
+#widget4 img {
+width: 36%;
+margin-top: 20px;
+background-color: rgb(66,66,66);
+border-radius: 18px;
+padding: 20px;
+border: 2px solid #fff;
+float: left;
+clear: right;
+margin-left: 7.5%;
+margin-right: 6%;
 }
 
-.widget1 img,
-.widget2 img,
-.widget3 img,
-.widget4 img {
-	
-	border-radius: 15px;
-	float: left;
-	width: 45%;
-	margin-left: 10px;
-	margin-right: 10px;
+#widget1:hover img,
+#widget2:hover img,
+#widget3:hover img {
+background-color: green;
+/*width: 34%;*/
+float: left;
+clear: right;
 }
 
-.widget1:hover img,
-.widget2:hover img,
-.widget3:hover img,
-.widget4:hover img {
+#submit {
+/*	margin-top: 35px;*/
+	width: 100%;
 
-	border-radius: 15px;
-	float: left;
-	width: 45%;
-	margin-left: 10px;
-	margin-right: 10px;
+#reset {
+	width: 65px;
+	border-radius: 20px;
+	float: right;
+	padding: 0;
+}
+
+#trainIllus {
+	width: 100%;
 }
 
 #trainIllus2 {
@@ -316,34 +347,4 @@ margin-right: auto;
 	padding: 40px;
 	border: 2px solid;
 }
-
-@media only screen and (max-width: 520px) {
-
-.widget1 img,
-.widget2 img,
-.widget3 img,
-.widget4 img {
-	
-	border-radius: 15px;
-	float: left;
-	width: 35%;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding: 5px;
 }
-
-.widget1:hover img,
-.widget2:hover img,
-.widget3:hover img,
-.widget4:hover img {
-
-	border-radius: 15px;
-	float: left;
-	width: 35%;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding: 5px;
-}
-
-
-	}

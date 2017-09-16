@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	
 	<meta charset="UTF-8">
 	<title>Denver Transit Station Guide - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/stylesheets/railguide.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-
     <!-- brendan's links -->
     <link rel="stylesheet" href="./assets/stylesheets/clock.css">
     <script src="./assets/javascript/moment.js"></script>
 	<script src="./assets/javascript/clock.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
 
 </head>
 <body>
-	<div class="container">
-	<div class="row" style="margin-left: 0; margin-right: 0">
+	<div class="container" id="main-container">
+	<div class="row" id="main-container-row" style="margin-left: 0; margin-right: 0">
 		
-		<div class="col-sm-12">
+		<div class="col-sm-12" id="header-container">
 			<div class="col-sm-6" style="float: left"><img src="./assets/images/rail-line-logo2.png" id="trainIllus"></div>
 			<div class="col-sm-6" id="currentTime" align="center" style="float: right;">
 			
@@ -49,13 +46,31 @@
 						</div>
 					</div>
 				</div>
-				<!-- end clock here -->
+			<!-- end clock here -->
 			
-			</div>
-		</div>
+			</div><!-- Col-6 Current Time  Close *****************************-->
+		</div><!-- Col-12 Header Close ***************************************-->
 			
-	<div class="row"></div>
+	<div class="row">
+		
+			<div class="col-sm-12" id="alertMessageBoard" style="text-align: center">
+		
+		<div class="alert alert-success" id="success" role="alert">GOOD FOR YOU! You made it safely to your destination!</div>
+
+        <div class="alert alert-warning" id="timeUpInOneMinute" role="alert">Heads up! WAKE-UP, you DON'T WANT TO MISS YOUR STATION!!</div>
+
+        <div class="alert alert-danger" id="fail" role="alert">Idiot! You CAN'T LEAVE AND ARRIVE AT THE SAME STATION!!</div>
+
+        <div class="alert alert-dark" id="noStation" role="alert">Try again. NO STATION CAN BE FOUND!!</div>
+
+        <div class="alert alert-danger" id="stationNotFound" role="alert">There are no trains going to the destination selected.</div>
+
+	</div>
+
+	</div>
+		
 		<div class="col-sm-12 form-group" style="background-color: rgb(66, 66, 66); padding: 30px; margin-bottom: 0; border-top-left-radius: 20px; border-top-right-radius: 20px">
+			
 			<div class="col-sm-4">
 				  <label for="startStationLabel" style="color: #BFF268">Select Starting Station:</label>
 				  <select class="form-control" id="startingStation">
@@ -81,10 +96,11 @@
 					<option value="18">27th & Welton</option>
 					<option value="19">30th & Downing</option>
 				  </select>
-			</div>
+			</div><!-- Col-4 Close **********************************************-->
+			
 			<div class="col-sm-2">
 				  <label for="timeToStart" style="color: #BFF268">Approx. Start Time:</label>
-				  <select class="form-control" id="estStartTime">
+				  <select class="form-control" id="estartingStationtartTime">
 					<option value="selectStart">Select Time:</option>
 					<option value="03:00:00">3AM</option>
 					<option value="04:00:00">4AM</option>
@@ -107,9 +123,10 @@
 					<option value="21:00:00">9PM</option>
 					<option value="22:00:00">10PM</option>
 					<option value="23:00:00">11PM</option>
-					<option value="23:59:00">12AM</option>
+					<option value="23:59:59">12AM</option>
 				  </select>
-			</div>
+			</div><!-- Col-2 Close **********************************************-->
+			
 			<div class="col-sm-4">
 				<label for="endStationLabel" style="color:#FF4444">Select Destination Station:</label>
 				  <select class="form-control" id="endingStation">
@@ -135,63 +152,78 @@
 					<option value="18">27th & Welton</option>
 					<option value="19">30th & Downing</option>
 				  </select>
-			</div>
+			</div><!-- Col-4 Close **********************************************-->
 
 			<button class="col-sm-2" value="reset" id="reset" style="padding: 0">Reset</button>
 
 			<div class="row"></div>
+
 			<div class="col-sm-4" style="padding: 0"></div>
+
 			<button class="col-sm-4" value="submit" id="submit">Go!</button>
 			
-	</div>
-</div>		
+			<!-- AUDIO MP3 "ARRIVAL TIME" -*********************************-->
+			<audio id="arrival-audio" src="./assets/audio/arrival-audio.mp3" type="audio/mp3"></audio>
+			<!-- AUDIO MP3 "ARRIVAL TIME" -*********************************-->
+
+	</div><!-- Col-12 Close ************************************************-->
+</div><!-- Container Close *************************************************-->
+
 <div class="container" id="map" align="center">
-<div class="col-sm-7"><img src="./assets/images/Map-Illustrator-C_D.png" id="imgMap"></div>
-<div class="col-sm-5">
-	<div class="col-sm-12 departure" style="margin-top: 40px; height: auto" id="tripInfo">
-			<table class="col-sm-6">
-				<th style="height: 30px"; padding: 8px">Departing from:</th></tr>
-				<tr style="height: 30px"><td id ="sStation" style="font-size: 14px;font-weight: 800">Station Name</td></tr>
-				<tr style="height: 30px"><td id ="sTrain1">Data Return 1</td></tr>
-				<tr style="height: 30px"><td id ="sTrain2">Data Return 2</td></tr>
-				<tr style="height: 30px"><td id ="sTrain3">Data Return 3</td></tr>
+	
+	<div class="col-sm-6 col-sm-push-6" id="trainBoard" style="padding-left: 40px; padding-right: 40px">
+		<div class="col-sm-12 departure" style="margin-top: 40px; height: auto; font-size: 11px; padding-left: 0; padding-right: 0" id="tripInfo">
+			<table class="col-sm-4" id="trainTable4" style="height: auto">
+				<th style="height: 30px">Train Line:</th></tr>
+				<tr style="height: 30px"><td id ="TrainName" align="center"></td></tr>
+				<tr style="height: 30px"><td id ="Train1" align="center"></td></tr>
+				<tr style="height: 30px"><td id ="Train2" align="center"></td></tr>
+				<tr style="height: 30px"><td id ="Train3" align="center"></td></tr>
 			</table>
-			<table class="col-sm-6">
+			<table class="col-sm-4" id="trainTable4" style="height: auto">
+				<th style="height: 30px">Departing from:</th></tr>
+				<tr style="height: 30px"><td id ="sStation">Station:</td></tr>
+				<tr style="height: 30px"><td id ="sTrain1"> </td></tr>
+				<tr style="height: 30px"><td id ="sTrain2"> </td></tr>
+				<tr style="height: 30px"><td id ="sTrain3"> </td></tr>
+			</table>
+			<table class="col-sm-4" id="trainTable4" style="height: auto">
 				<th style="height: 30px">Arriving at:</th></tr>
-				<tr style="height: 30px; padding: 8px"><td id="dStation" style="font-size: 14px;font-weight: 800">Station Name</td></tr>
-				<tr style="height: 30px"><td id ="dTrain1">Data Return 1</td></tr>
-				<tr style="height: 30px"><td id ="dTrain2">Data Return 2</td></tr>
-				<tr style="height: 30px"><td id ="dTrain3">Data Return 3</td></tr>
+				<tr style="height: 30px"><td id="dStation">Station:</td></tr>
+				<tr style="height: 30px"><td id ="dTrain1"> </td></tr>
+				<tr style="height: 30px"><td id ="dTrain2"> </td></tr>
+				<tr style="height: 30px"><td id ="dTrain3"> </td></tr>
 			</table>
 
 
-	</div>
-</div>
-</div>
+		</div><!-- Col-12 Departure Close ***************************************-->
+	</div><!-- Col-6 Push Close *************************************************-->
+	
+	<div class="col-sm-6 col-sm-pull-6"><img src="./assets/images/Map-Illustrator-C_D.png" id="imgMap"></div>
 
-
+</div><!-- Map Container Close **************************************************-->
 
 <div class="row" style="margin-top: 40px" align="center"></div>
 	
-	<div class="container">
-		<div class="col-sm-3 widget1" id="widgets"><a href="gps.html" target="_blank"><img src="./assets/images/whereAm-widget.png"></a></div>
-		<div class="col-sm-3 widget2" id="widgets"><img src="./assets/images/alarm-widget.png"></div>
-		<div class="col-sm-3 widget3" id="widgets"><a href="newsfeed.html" target="_blank"><img src="./assets/images/newsfeed-widget.png"></a></div>
-		<div class="col-sm-3 widget4" id="widgets"><img src="./assets/images/phone2-widget.png"></div>
-	</div>	
+	<div class="container-fluid" style="padding: 0">
+			<div class="col-sm-3" id="widget1" align="center"><a href="gps.html" target="_blank"><img src="./assets/images/whereAm-widget.png"></a></div>
+			<div class="col-sm-3" id="widget2" align="center"><img src="./assets/images/alarm-widget.png"></div>
+			<div class="col-sm-3" id="widget3" align="center"><a href="newsfeed.html" target="_blank"><img src="./assets/images/newsfeed-widget.png"></a></div>
+			<div class="col-sm-3" id="widget4" align="center"><img src="./assets/images/phone2-widget.png"></div>
+	</div><!-- Container Close *************************************************-->	
 
 
 <div class="row" style="height: 50px; background-color: transparent"></div>
 	
-</div>
-</div> <!-- Main Container Close -->
-<script src="./assets/javascript/clock.js"></script>
+ </div><!-- Main Row Close ******************************************************-->
+ </div><!-- Main Container Close ************************************************-->
+
 <script src="./assets/javascript/newsfeed.js"></script>
 <script src="./assets/javascript/gui-mike.js"></script>
 <script src="./assets/javascript/gps.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./assets/javascript/data.js"></script>
+
 </body>
 </html>
