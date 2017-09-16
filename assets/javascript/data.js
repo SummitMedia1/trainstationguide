@@ -53,7 +53,7 @@ $("#submit").on("click", function(event) {
 				chooseTravelDirecion();
 
 				// update train starting and ending times 
-				//set timer 4 secs to allow firebase data feed to complete before updating array 
+				//set timer 4 secs to allow (firebase data) feed to complete before updating array 
 				// setTimeout(listArray, 2000);
 				setTimeout(dlistArray, 4000);
  }); //end of on click
