@@ -44,7 +44,7 @@ function weatherWrite(x) {
 	$("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + weatherIcon);
 	if (temp > 80) {
 		$("#weather-recommended").html("Good " + weatherDayNight + " for shorts!");
-	} else if (temp < 50) {
+	} else if (temp < 60) {
 		$("#weather-recommended").html("Bring a jacket!");
 	} else {
 		$("#weather-recommended").html("Pretty nice out.");
