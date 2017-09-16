@@ -58,6 +58,15 @@ $("#submit").on("click", function(event) {
 				setTimeout(dlistArray, 4000);
  }); //end of on click
 
+//-----------------Alarm Function Button ------------------------------------------------------------
+$("#widget2").on("click", function(event) {
+      $("#arrival-audio").get(0).play();
+
+});
+
+
+
+
 //==============================functions below ================================
 //==========================Initialize Variables================================
  function runInitVariables() {
