@@ -23,38 +23,10 @@ margin-bottom: 30px;
 
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    float: left;
-    position: fixed;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-td {
-    text-align: left;
-    padding-left: 12px;
-}
-
-tr:nth-child(odd){background-color: #bbe861}
-
-table th {
-    background-color: #007931;
-    color: white;
-    padding-left: 8px;
-}
-
 label {
 	font-size: 10px;
 	font-weight: 800;
 }
-
-/*.form-control > option {
-	margin-top: 10px;
-}*/
 
 #submit {
 	margin-top: 35px;
@@ -110,6 +82,11 @@ background-color: green;
 /*width: 78%;*/
 }
 
+.alert {
+	font-size: 24px;
+	font-weight: 800;
+}
+
 #map {
 	position: relative;
 	width: 100%;
@@ -122,7 +99,6 @@ background-color: green;
 }
 
 #imgMap {
-	margin-top: 50px;
 	height: auto;
 	width: 100%;
 	padding-bottom: 30px;

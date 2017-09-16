@@ -171,35 +171,44 @@
 
 <div class="container" id="map" align="center">
 	
-	<div class="col-sm-6 col-sm-push-6" id="trainBoard" style="padding-left: 40px; padding-right: 40px">
-		<div class="col-sm-12 departure" style="margin-top: 40px; height: auto; font-size: 11px; padding-left: 0; padding-right: 0" id="tripInfo">
-			<table class="col-sm-4" id="trainTable4" style="height: auto">
-				<th style="height: 30px">Train Line:</th></tr>
-				<tr style="height: 30px"><td id ="TrainName" align="center"></td></tr>
-				<tr style="height: 30px"><td id ="Train1" align="center"></td></tr>
-				<tr style="height: 30px"><td id ="Train2" align="center"></td></tr>
-				<tr style="height: 30px"><td id ="Train3" align="center"></td></tr>
-			</table>
-			<table class="col-sm-4" id="trainTable4" style="height: auto">
-				<th style="height: 30px">Departing from:</th></tr>
-				<tr style="height: 30px"><td id ="sStation">Station:</td></tr>
-				<tr style="height: 30px"><td id ="sTrain1"> </td></tr>
-				<tr style="height: 30px"><td id ="sTrain2"> </td></tr>
-				<tr style="height: 30px"><td id ="sTrain3"> </td></tr>
-			</table>
-			<table class="col-sm-4" id="trainTable4" style="height: auto">
-				<th style="height: 30px">Arriving at:</th></tr>
-				<tr style="height: 30px"><td id="dStation">Station:</td></tr>
-				<tr style="height: 30px"><td id ="dTrain1"> </td></tr>
-				<tr style="height: 30px"><td id ="dTrain2"> </td></tr>
-				<tr style="height: 30px"><td id ="dTrain3"> </td></tr>
+	<div class="col-sm-6" id="trainBoard" style="padding-left: 40px; padding-right: 40px">
+			<table class="table table-striped" id="tripInfo">
+				<thead>
+				    <tr>
+				      	<th>Train Line:</th>
+				      	<th>Departing from:</th>
+				      	<th>Arriving at:</th>
+				    </tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td id ="TrainName"> </td>
+						<td id ="sStation"> </td>
+						<td id ="dStation"> </td>	
+					</tr>
+					<tr>
+						<td id ="Train1"> </td>
+						<td id ="sTrain1"> </td>
+						<td id ="dTrain1"> </td>
+					</tr>
+					<tr>
+						<td id="Train2">Station:</td>
+						<td id ="sTrain2"> </td>
+						<td id ="dTrain2"> </td>							
+					</tr>
+					<tr>
+						<td id="Train3">Station:</td>
+						<td id ="sTrain3"> </td>
+						<td id ="dTrain3"> </td>							
+					</tr>
+				</tbody>
 			</table>
 
 
-		</div><!-- Col-12 Departure Close ***************************************-->
+
 	</div><!-- Col-6 Push Close *************************************************-->
 	
-	<div class="col-sm-6 col-sm-pull-6"><img src="./assets/images/Map-Illustrator-C_D.png" id="imgMap"></div>
+	<div class="col-sm-6"><img src="./assets/images/Map-Illustrator-C_D.png" id="imgMap"></div>
 
 </div><!-- Map Container Close **************************************************-->
 
